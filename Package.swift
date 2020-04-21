@@ -5,18 +5,22 @@ import PackageDescription
 
 let package = Package(
     name: "PokeClient",
+    platforms: [
+        .iOS(.v10)
+    ],
     products: [
         .library(
             name: "PokeClient",
             targets: ["PokeClient"]),
     ],
     dependencies: [
-        .package(name: "Core", url: "https://github.com/persiogv/Core", from: "0.0.17")
+        .package(name: "Core", url: "https://github.com/persiogv/Core", from: "1.0.0"),
+        .package(name: "CoreNetworking", url: "https://github.com/persiogv/CoreNetworking", from: "1.0.0")
     ],
     targets: [
         .target(
             name: "PokeClient",
-            dependencies: ["Core"]),
+            dependencies: ["Core", "CoreNetworking"]),
         .testTarget(
             name: "PokeClientTests",
             dependencies: ["PokeClient"]),

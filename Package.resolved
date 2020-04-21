@@ -6,8 +6,17 @@
         "repositoryURL": "https://github.com/persiogv/Core",
         "state": {
           "branch": null,
-          "revision": "302c95710c68be7944dc789416030b9ce89a336a",
-          "version": "0.0.17"
+          "revision": "d8951c517be6c15c3e90f5590dea1c4246959756",
+          "version": "1.0.0"
+        }
+      },
+      {
+        "package": "CoreNetworking",
+        "repositoryURL": "https://github.com/persiogv/CoreNetworking",
+        "state": {
+          "branch": null,
+          "revision": "f06adadcd3906775d218c82f1ef7b268390e32f4",
+          "version": "1.0.0"
         }
       }
     ]

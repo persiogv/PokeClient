@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreNetworking
 import Core
 
 class WebhookProvider: ApiProvider {

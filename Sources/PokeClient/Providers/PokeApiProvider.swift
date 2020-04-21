@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Core
+import CoreNetworking
 
 class PokeApiProvider: ApiProvider {
     
