@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Core",
+        "repositoryURL": "https://github.com/persiogv/Core",
+        "state": {
+          "branch": null,
+          "revision": "302c95710c68be7944dc789416030b9ce89a336a",
+          "version": "0.0.17"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
