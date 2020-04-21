@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.1
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -14,8 +14,8 @@ let package = Package(
             targets: ["PokeClient"]),
     ],
     dependencies: [
-        .package(name: "Core", url: "https://github.com/persiogv/Core", from: "1.0.0"),
-        .package(name: "CoreNetworking", url: "https://github.com/persiogv/CoreNetworking", from: "1.0.0")
+        .package(url: "https://github.com/persiogv/Core", from: "1.0.0"),
+        .package(url: "https://github.com/persiogv/CoreNetworking", from: "1.0.0")
     ],
     targets: [
         .target(
