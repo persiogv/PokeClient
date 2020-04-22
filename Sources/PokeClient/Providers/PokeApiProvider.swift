@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreNetworking
+import Core
 
 class PokeApiProvider: ApiProvider {
     
@@ -14,6 +15,10 @@ class PokeApiProvider: ApiProvider {
     
     private struct Constants {
         static let baseUrl = "https://pokeapi.co/api/v2"
+        
+        struct Files {
+            static let infoPlist = "Info"
+        }
         
         struct Paths {
             static let pokemon = "/pokemon"
@@ -29,6 +34,13 @@ class PokeApiProvider: ApiProvider {
     
     /// Initializer
     required init() {
+        let file = FileRepresentation(withFileName: Constants.Files.infoPlist, fileExtension: .plist, fileBundle: .main)
+        
+        if let info = try? file.decoded(to: InfoPlist.self, using: PropertyListDecoder()), let baseUrl = info.serverUrl {
+            super.init(baseUrl: baseUrl)
+            return
+        }
+        
         super.init(baseUrl: Constants.baseUrl)
     }
 }
