@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/persiogv/Core", from: "1.0.3"),
-        .package(url: "https://github.com/persiogv/CoreNetworking", from: "1.0.1")
+        .package(url: "https://github.com/persiogv/CoreNetworking", from: "1.0.2"),
     ],
     targets: [
         .target(

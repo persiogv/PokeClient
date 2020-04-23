@@ -32,16 +32,15 @@ class PokeApiProvider: ApiProvider {
     
     // MARK: Initializers
     
-    /// Initializer
-    required init() {
+    override init(baseUrl: String = Constants.baseUrl, requester: HTTPRequester = Networker()) {
         let file = FileRepresentation(withFileName: Constants.Files.infoPlist, fileExtension: .plist, fileBundle: .main)
         
         if let info = try? file.decoded(to: InfoPlist.self, using: PropertyListDecoder()), let baseUrl = info.serverUrl {
-            super.init(baseUrl: baseUrl)
+            super.init(baseUrl: baseUrl, requester: requester)
             return
         }
         
-        super.init(baseUrl: Constants.baseUrl)
+        super.init(baseUrl: baseUrl, requester: requester)
     }
 }
 
