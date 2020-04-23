@@ -2,7 +2,7 @@ import XCTest
 import Core
 @testable import PokeClient
 
-class FavoritePokemonSuccessMock: FavoritePokemonProvider {
+final class FavoritePokemonSuccessMock: FavoritePokemonProvider {
     
     func checkForFavorite(_ pokemon: Pokemon) -> Bool {
         return true
@@ -19,5 +19,24 @@ class FavoritePokemonSuccessMock: FavoritePokemonProvider {
     
     func removeFromFavorites(pokemon: Pokemon, completion: @escaping PokemonFavoriteCompletion) {
         completion(.success(pokemon))
+    }
+}
+
+final class FavoritePokemonFailureMock: FavoritePokemonProvider {
+    
+    func checkForFavorite(_ pokemon: Pokemon) -> Bool {
+        return false
+    }
+    
+    func fetchFavoritedPokemons(completion: @escaping PokemonListCompletion) {
+        completion(.failure(ErrorMock.some))
+    }
+    
+    func favoritePokemon(pokemon: Pokemon, completion: @escaping PokemonFavoriteCompletion) {
+        completion(.failure(ErrorMock.some))
+    }
+    
+    func removeFromFavorites(pokemon: Pokemon, completion: @escaping PokemonFavoriteCompletion) {
+        completion(.failure(ErrorMock.some))
     }
 }
