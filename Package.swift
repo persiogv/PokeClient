@@ -14,7 +14,7 @@ let package = Package(
             targets: ["PokeClient"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/persiogv/Core", from: "1.0.2"),
+        .package(url: "https://github.com/persiogv/Core", from: "1.0.3"),
         .package(url: "https://github.com/persiogv/CoreNetworking", from: "1.0.1")
     ],
     targets: [
