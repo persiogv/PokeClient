@@ -14,7 +14,7 @@ This is a work in progress project. New features are being added. Contributions 
 
 ## Favorites
 
-As PokeAPI doesn't have endpoints to handle favorited pokemons, this is just a fake feature, caching the favorites only in the memory.
+As PokéAPI doesn't have endpoints to handle favorited pokemons, this is just a fake feature, caching the favorites only in the memory.
 
 ## Usage
 
