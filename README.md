@@ -1,6 +1,6 @@
 # PokeClient
 
-A very simple **Swift Package** to consume PokeAPI.
+A very simple **Swift Package** to consume PokéAPI.
 
 ## Advice
 
